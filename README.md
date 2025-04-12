@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Color Space
 
-## Getting Started
+**Color Space** é um conversor de cores moderno, criado com base nas novidades introduzidas no **TailwindCSS v4**, que agora adota espaços de cores avançados como o **OKLCH**.
 
-First, run the development server:
+O OKLCH é um espaço de cores perceptualmente uniforme, o que significa que ele proporciona um controle muito mais intuitivo sobre brilho, saturação e matiz — ideal para design visual preciso e acessível.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Recursos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✅ Suporte a múltiplos formatos de entrada (HEX, RGB, HSL, OKLCH)
+- 🎚  Controles deslizantes intuitivos para ajustes em OKLCH
+- 👀 Visualização em tempo real da cor resultante
+- 📋 Cópia rápida de valores em diferentes formatos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Como Usar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Insira uma Cor**  
+   Digite ou cole uma cor em qualquer um dos formatos suportados: HEX, RGB, HSL ou OKLCH.
 
-## Learn More
+2. **Ajuste os Valores com os Controles**  
+   Use os sliders para alterar os valores no espaço OKLCH e observe as mudanças na cor.
 
-To learn more about Next.js, take a look at the following resources:
+3. **Visualize os Resultados**  
+   Veja a cor atualizada e seus equivalentes em todos os formatos suportados.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Copie com um Clique**  
+   Clique no ícone de cópia ao lado de qualquer valor para copiá-lo para sua área de transferência.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💡 Formatos de Entrada Suportados
 
-## Deploy on Vercel
+- **HEX**: `#FF0000` ou `FF0000`  
+- **RGB**: `rgb(255, 0, 0)`  
+- **HSL**: `hsl(0, 100%, 50%)` ou `0 100% 50%`  
+- **OKLCH**: `oklch(0.6 0.15 240)`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tecnologias Utilizadas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [TailwindCSS](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org/)
+- [Shadcn/UI](https://ui.shadcn.com/)
+- [Culori](https://culorijs.org/api/)
+- [Vercel](https://vercel.com/)
+
+ ### Feito com ❤️ por [Philipe Morais](https://linkedin.com/in/ph-morais/)
