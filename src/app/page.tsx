@@ -1,3 +1,5 @@
+"use client";
+
 import ColorConverter from "@/components/color-converter";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -5,8 +7,11 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import ColourfulText from "@/components/ui/colourful-text";
 import Logo from "@/components/logo";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+	const { theme } = useTheme();
+
 	return (
 		<div className="min-h-screen flex flex-col items-center">
 			<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-center">
@@ -47,29 +52,47 @@ export default function Home() {
 						</p>
 					</div>
 				</section>
-				<section className="container pb-16">
-					<div className="mx-auto max-w-[980px]">
+				<section className="pb-16">
+					<div className="mx-auto max-w-full">
 						<ColorConverter />
 					</div>
 				</section>
-				<section className="container py-16 border-t">
+				<section className="container py-16 border-t px-4 lg:px-0">
 					<div className="mx-auto max-w-[980px] grid gap-8 md:grid-cols-3">
 						<div className="space-y-2">
-							<h3 className="text-2xl font-shadows">Por que OKLCH?</h3>
+							<h3 className="text-2xl font-shadows">
+								{theme === "dark" ? (
+									<ColourfulText text="Por que OKLCH?" />
+								) : (
+									"Por que OKLCH?"
+								)}
+							</h3>
 							<p className="text-muted-foreground">
 								OKLCH é um espaço de cores perceptualmente uniforme que
 								proporciona melhor controle sobre as propriedades das cores.
 							</p>
 						</div>
 						<div className="space-y-2">
-							<h3 className="text-2xl font-shadows">Controle Preciso</h3>
+							<h3 className="text-2xl font-shadows">
+								{theme === "dark" ? (
+									<ColourfulText text="Controle Preciso" />
+								) : (
+									"Controle Preciso"
+								)}
+							</h3>
 							<p className="text-muted-foreground">
 								Ajuste as cores com controles deslizantes precisos e entradas
 								numéricas para resultados perfeitos.
 							</p>
 						</div>
 						<div className="space-y-2">
-							<h3 className="text-2xl font-shadows">Diversos formatos</h3>
+							<h3 className="text-2xl font-shadows">
+								{theme === "dark" ? (
+									<ColourfulText text="Diversos formatos" />
+								) : (
+									"Diversos formatos"
+								)}
+							</h3>
 							<p className="text-muted-foreground">
 								Converta entre formatos de cores populares com um único clique.
 								Copie e cole com facilidade.
