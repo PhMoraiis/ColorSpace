@@ -144,11 +144,6 @@ export default function ColorConverter() {
 			} else if (inputFormat === "hsl") {
 				if (!processedInput.startsWith("hsl(")) {
 					const values = processedInput.split(/[\s,]+/); // Split by space or comma
-					if (values.length !== 3) {
-						throw new Error(
-							"Invalid HSL format. Use H S% L% or hsl(H, S%, L%)",
-						);
-					}
 					const [h, s, l] = values.map((v, i) => {
 						const num = Number.parseFloat(v.replace("%", ""));
 						if (Number.isNaN(num))
@@ -161,9 +156,6 @@ export default function ColorConverter() {
 			} else if (inputFormat === "rgb") {
 				if (!processedInput.startsWith("rgb(")) {
 					const values = processedInput.split(/[\s,]+/);
-					if (values.length !== 3) {
-						throw new Error("Invalid RGB format. Use R G B or rgb(R, G, B)");
-					}
 					const [r, g, b] = values.map((v) => {
 						const num = Number.parseInt(v, 10);
 						if (Number.isNaN(num) || num < 0 || num > 255)
@@ -175,9 +167,6 @@ export default function ColorConverter() {
 			} else if (inputFormat === "oklch") {
 				if (!processedInput.startsWith("oklch(")) {
 					const values = processedInput.split(/[\s,]+/);
-					if (values.length !== 3) {
-						throw new Error("Invalid OKLCH format. Use L C H or oklch(L C H)");
-					}
 					const [l, c, h] = values.map((v, i) => {
 						const num = Number.parseFloat(v);
 						if (Number.isNaN(num)) throw new Error(`Invalid OKLCH value: ${v}`);
@@ -292,13 +281,13 @@ export default function ColorConverter() {
 	const getPlaceholderByFormat = (format: ColorFormat) => {
 		switch (format) {
 			case "hex":
-				return "#RRGGBB or #RGB";
+				return "#FFFFFF or #FFF";
 			case "rgb":
-				return "R G B or rgb(R,G,B)";
+				return "rgb(R,G,B)";
 			case "hsl":
-				return "H S% L% or hsl(H,S%,L%)";
+				return "hsl(H,S%,L%)";
 			case "oklch":
-				return "L C H or oklch(L C H)";
+				return "oklch(L C H)";
 			default:
 				return "Enter color value";
 		}
