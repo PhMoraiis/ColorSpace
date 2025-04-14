@@ -719,7 +719,7 @@ export default function ColorConverter() {
 										{new Date().getFullYear()}
 									</div>
 									<div className="capitalize font-satoshi-regular">
-										{new Date().toLocaleString("default", { month: "long" })}
+										{new Date().toLocaleString("pt-BR", { month: "long" })}
 									</div>
 								</div>
 								<div className="text-center sm:text-right">
